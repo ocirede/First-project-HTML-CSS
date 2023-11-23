@@ -1,0 +1,1153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #121212;
+}
+@font-face {
+  font-family: Wildside;
+  src: url(../Fonts/__MACOSX/WastedYouthRegular.ttf);
+}
+
+/* header */
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 8vh;
+  background-color: #121212;
+  z-index: 4;
+}
+
+.secondtitle {
+  display: none;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 50px;
+  background-color: rgb(74, 71, 71);
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.fa-bars-staggered,
+.fa-x {
+  align-self: center;
+  margin-left: 90px;
+  z-index: 30;
+  cursor: pointer;
+}
+
+header label {
+  flex-basis: 20%;
+}
+.title {
+  font-family: Wildside;
+  padding-top: 3px;
+  color: #73d277;
+  font-size: 5rem;
+  z-index: 10;
+}
+
+input[type="search"] {
+  height: 35px;
+  background-color: #73d277;
+  font-weight: bolder;
+}
+
+i {
+  color: #73d277;
+  font-size: 1.75rem;
+}
+
+#menu {
+  display: none;
+}
+
+label .fa-x {
+  display: none;
+}
+
+header input:checked ~ label .fa-bars-staggered {
+  display: none;
+}
+
+header input:checked ~ label .fa-x {
+  display: block;
+}
+
+/* slide div */
+
+.info-menu {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 8vh;
+  left: -300vw;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100vh;
+  background: #73d277;
+  z-index: 9;
+  gap: 10px;
+  transition: left 0.5s ease-in-out;
+}
+
+header #menu:checked ~ .info-menu {
+  left: 0;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
+  color: black;
+}
+
+.content {
+  font-size: 1.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.email {
+  text-decoration: none;
+}
+
+/* FIRST SECTION */
+
+.mainsection {
+  position: relative;
+  background-image: url(../Images/hiphop.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.hiphop {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  font-size: 4rem;
+  color: #73d277;
+  z-index: 0;
+  padding: 20px;
+}
+
+/* 2nd section */
+
+.secondsection {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  min-width: 230px;
+  display: grid;
+  grid-template-columns: repeat(6, 300px) 1fr;
+  grid-template-rows: 300px 60px 300px 60px 300px 60px 300px 60px;
+  columns: auto auto;
+  grid-gap: 30px;
+  overflow: hidden;
+}
+
+.beastieboys {
+  position: relative;
+  background-image: url(../Images/beastieboys_check_your_head.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 1/1/2/2;
+  transition: transform 0.7s ease;
+}
+
+.beastieboys:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.boys-description {
+  grid-area: 2/1/3/2;
+  color: white;
+  text-align: center;
+}
+.big-notorius {
+  background-image: url(../Images/life-after-3lp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 1/2/2/3;
+  transition: transform 0.7s ease;
+}
+
+.big-notorius:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.big-description {
+  grid-area: 2/2/3/3;
+  color: white;
+  text-align: center;
+}
+
+.tribe-quest {
+  background-image: url(../Images/A-Tribe-Called-Quest-Midnight-Marauders.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 1/3/2/4;
+  transition: transform 0.7s ease;
+}
+
+.tribe-quest:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.tribe-description {
+  grid-area: 2/3/3/4;
+  color: white;
+  text-align: center;
+}
+
+.dre-chronicles {
+  background-image: url(../Images/drdrechronic.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 3/1/4/2;
+  transition: transform 0.7s ease;
+}
+
+.dre-chronicles:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.dre-description {
+  grid-area: 4/1/5/2;
+  color: white;
+  text-align: center;
+}
+
+.fugees {
+  background-image: url(../Images/fugees.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 3/2/4/3;
+  transition: transform 0.7s ease;
+}
+
+.fugees:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.fugees-description {
+  grid-area: 4/2/5/3;
+  color: white;
+  text-align: center;
+}
+
+.wutang {
+  background-image: url(../Images/Wu-Tang-Clan-Enter-The-Wu-Tang.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 3/3/4/4;
+  transition: transform 0.7s ease;
+}
+
+.wutang:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.wutang-description {
+  grid-area: 4/3/5/4;
+  color: white;
+  text-align: center;
+}
+
+.tupac {
+  background-image: url(../Images/tupac.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 5/1/6/2;
+  transition: transform 0.7s ease;
+}
+
+.tupac:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.tupac-description {
+  grid-area: 6/1/7/2;
+  color: white;
+  text-align: center;
+}
+
+.cypress-hill {
+  background-image: url(../Images/cypresshill.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 5/2/6/3;
+  transition: transform 0.7s ease;
+}
+
+.cypress-hill:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.cypress-description {
+  grid-area: 6/2/7/3;
+  color: white;
+  text-align: center;
+}
+
+.dmx {
+  background-image: url(../Images/DMX..jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 5/3/6/4;
+  transition: transform 0.7s ease;
+}
+
+.dmx:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.dmx-description {
+  grid-area: 6/3/7/4;
+  color: white;
+  text-align: center;
+}
+
+.eazy-e {
+  background-image: url(../Images/eazy-e.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 7/1/8/2;
+  transition: transform 0.7s ease;
+}
+
+.eazy-e:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.eazy-e-description {
+  grid-area: 8/1/9/2;
+  color: white;
+  text-align: center;
+}
+
+.nwa {
+  background-image: url(../Images/nwa1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 7/2/8/3;
+  transition: transform 0.7s ease;
+}
+
+.nwa:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.nwa-description {
+  grid-area: 8/2/9/3;
+  color: white;
+  text-align: center;
+}
+
+.publicenemy {
+  background-image: url(../Images/Public+Enemy+Fear+Of+A+Black+Planet-618667.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 7/3/8/4;
+  transition: transform 0.7s ease;
+}
+
+.publicenemy:hover {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.enemy-description {
+  grid-area: 8/3/9/4;
+  color: white;
+  text-align: center;
+}
+
+.hip-hop-article {
+  grid-area: 1/4/9/7;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.article-picture {
+  background-image: url(../Images/dj-kool-herc-169.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: 6/4/8/7;
+}
+
+.article-description {
+  grid-area: 8/4/9/7;
+  color: white;
+  text-align: center;
+}
+
+.hip-hop-article1 {
+  display: none;
+}
+
+/* 3rd srction */
+.thirdsection {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.fa-less-than,
+.fa-greater-than {
+  color: black;
+}
+
+/* beastieboy sale page */
+
+/* first section */
+
+.beastie-section {
+  width: 70%;
+  height: 100vh;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.button-shop {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.5rem;
+  height: 3.5rem;
+  background-color: #73d277;
+  color: #121212;
+  font-size: larger;
+}
+
+#shop {
+  display: none;
+}
+
+/* second section */
+
+.beastie-section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.beastie-2ndescription {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* width: 60%;
+  height: 100vh;
+} */
+
+/* secopndslide-salepage */
+
+.secondslide-sale-page {
+  height: 100vh;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 8vh;
+  right: -300vw;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  background: #73d277;
+  color: #121212;
+  z-index: 9;
+  gap: 30px;
+  padding-left: 30px;
+  z-index: 0;
+  transition: right 0.5s ease-in-out;
+}
+
+#shop:checked ~ .secondslide-sale-page {
+  right: 0;
+}
+
+.secondslide-sale-page #menu1:checked ~ .secondslide-sale-page {
+  right: -100vw;
+}
+
+#menu1 {
+  display: none;
+}
+
+.breakline {
+  width: 90%;
+  height: 3px;
+  background-color: #121212;
+}
+
+.calculation {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-top: 80%;
+  gap: 20px;
+}
+
+.calculation ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.checkout {
+  background-color: #121212;
+  width: 80%;
+  height: 4rem;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  background-color: #73d277;
+  height: 30rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #121212;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 13vh;
+  background-color: #121212;
+  color: white;
+}
+
+footer p {
+  margin: 20%;
+  height: 100%;
+}
+
+.up {
+  position: fixed;
+  right: 90%;
+  bottom: 5%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #73d278;
+  color: #121212;
+  border: 1px solid black;
+}
+
+.Close {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1860px) {
+  .secondslide-sale-page {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .article-picture,
+  .article-description,
+  .hip-hop-article {
+    display: none;
+  }
+
+  /* .publicenemy {
+    grid-area: 1/4/2/5;
+  }
+
+  .enemy-description {
+    grid-area: 2/4/3/5;
+    color: white;
+    text-align: center;
+  }
+
+  .nwa {
+    grid-area: 3/4/4/5;
+  }
+
+  .nwa-description {
+    grid-area: 4/4/5/5;
+    color: white;
+    text-align: center;
+  }
+  .eazy-e {
+    grid-area: 5/4/6/5;
+  }
+
+  .eazy-e-description {
+    grid-area: 6/4/7/5;
+    color: white;
+    text-align: center;
+  }
+
+  .article-picture {
+    grid-area: 7/1/9/5;
+  }
+
+  .beastie-img img {
+    width: 400px;
+    height: 400px;
+  } */
+  .pbeastie {
+    display: none;
+  }
+
+  .secondslide-sale-page {
+    width: 400px;
+  }
+
+  .checkout {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1345px) {
+  .hiphop {
+    top: 70%;
+  }
+
+  .beastie-img img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hiphop {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 845px) {
+  .secondslide-sale-page {
+    width: 500px;
+  }
+
+  .checkout {
+    font-size: 1rem;
+  }
+
+  .secondtitle {
+    font-family: wildside;
+    position: absolute;
+    top: 18%;
+    width: 100%;
+    height: 1vh;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #73d277;
+    z-index: 3;
+    font-size: 2.25rem;
+  }
+
+  .fa-bars-staggered,
+  .fa-x {
+    margin-left: 30px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* .secondsection {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    min-width: 230px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px 60px 300px 60px 300px 60px 300px 60px;
+    grid-gap: 30px;
+    overflow: hidden;
+  } */
+
+  .beastie-section {
+    color: white;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .contact-form {
+    width: 95%;
+  }
+
+  .search {
+    display: none;
+  }
+  .title {
+    margin-right: 40px;
+  }
+
+  .mainsection {
+    display: none;
+  }
+
+  .secondsection {
+    padding-top: 150px;
+  }
+
+  .thirdsection {
+    display: none;
+  }
+
+  .article-picture {
+    grid-area: 7/1/8/4;
+  }
+
+  .hip-hop-article {
+    display: none;
+  }
+
+  header {
+    top: 0;
+    left: 0;
+    height: 10vh;
+    z-index: 20;
+  }
+  .hip-hop-article1 {
+    display: block;
+    color: white;
+  }
+
+  .hiphop {
+    display: none;
+  }
+
+  .secondtitle {
+    font-family: wildside;
+    position: absolute;
+    top: 18%;
+    width: 100%;
+    height: 1vh;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #73d277;
+    z-index: 3;
+    font-size: 2.25rem;
+  }
+
+  .up {
+    display: none;
+  }
+
+  .secondslide-sale-page {
+    width: 400px;
+  }
+
+  .beastieboys {
+    grid-area: 3/1/4/2;
+  }
+
+  .boys-description {
+    grid-area: 4/1/5/2;
+    color: white;
+    text-align: center;
+  }
+  .big-notorius {
+    grid-area: 3/2/4/3;
+  }
+
+  .big-description {
+    grid-area: 4/2/5/3;
+    color: white;
+    text-align: center;
+  }
+
+  .tribe-quest {
+    grid-area: 3/3/4/4;
+  }
+
+  .tribe-description {
+    grid-area: 4/3/5/4;
+    color: white;
+    text-align: center;
+  }
+
+  .dre-chronicles {
+    grid-area: 5/1/6/2;
+  }
+
+  .dre-description {
+    grid-area: 6/1/7/2;
+    color: white;
+    text-align: center;
+  }
+
+  .fugees {
+    grid-area: 5/2/6/3;
+  }
+
+  .fugees-description {
+    grid-area: 6/2/7/3;
+    color: white;
+    text-align: center;
+  }
+
+  .wutang {
+    grid-area: 5/3/6/4;
+  }
+
+  .wutang-description {
+    grid-area: 6/3/7/4;
+    color: white;
+    text-align: center;
+  }
+
+  .tupac {
+    grid-area: 7/1/8/2;
+  }
+
+  .tupac-description {
+    grid-area: 8/1/9/2;
+    color: white;
+    text-align: center;
+  }
+
+  .cypress-hill {
+    grid-area: 7/2/8/3;
+  }
+
+  .cypress-description {
+    grid-area: 8/2/9/3;
+    color: white;
+    text-align: center;
+  }
+
+  .dmx {
+    grid-area: 7/3/8/4;
+    margin-right: 20px;
+    width: 100%;
+    min-width: 230px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px 60px 300px 60px 300px 60px 300px 60px;
+    grid-gap: 30px;
+    overflow: hidden;
+  }
+
+  .eazy-e {
+    grid-area: 7/4/8/5;
+  }
+
+  .eazy-e-description {
+    grid-area: 8/4/9/5;
+    color: white;
+    text-align: center;
+  }
+
+  .nwa {
+    grid-area: 5/4/6/5;
+  }
+
+  .nwa-description {
+    grid-area: 7/4/8/5;
+    color: white;
+    text-align: center;
+  }
+
+  .publicenemy {
+    grid-area: 3/4/4/5;
+  }
+
+  .enemy-description {
+    grid-area: 4/4/5/5;
+    color: white;
+    text-align: center;
+  }
+
+  .second-background-image {
+    background-image: url(../Images/hiphop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/3/5;
+  }
+
+  .content {
+    font-size: 1.25rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  /* .secondtitle {
+    display: none;
+  } */
+
+  .fa-bars-staggered,
+  .fa-x {
+    margin-left: 30px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .content {
+    font-size: 0.75rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .tribe-quest,
+  .tribe-description,
+  .fugees,
+  .fugees-description,
+  .wutang,
+  .wutang-description,
+  .cypress-hill,
+  .cypress-description,
+  .dmx,
+  .dmx-description,
+  .eazy-e .eazy-e-description,
+  .nwa,
+  .nwa-description,
+  .publicenemy,
+  .enemy-description {
+    display: none;
+  }
+  .content {
+    font-size: 0.75rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 3;
+  }
+  .secondtitle {
+    top: 15%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .second-background-image {
+    display: none;
+  }
+
+  .big-notorius {
+    grid-area: 1/1/2/2;
+  }
+
+  .big-description {
+    grid-area: 2/1/3/2;
+  }
+
+  .secondsection {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100%;
+    min-width: 230px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px 60px 300px 60px 300px 60px 300px 60px;
+    grid-gap: 30px;
+    overflow: hidden;
+  }
+
+  .contact-form {
+    width: 95%;
+  }
+
+  .beastie-2ndescription {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .secondslide-sale-page {
+    width: 380px;
+  }
+
+  .beastie-section {
+    margin-left: 0;
+  }
+}
